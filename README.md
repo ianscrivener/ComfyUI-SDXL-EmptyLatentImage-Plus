@@ -1,4 +1,4 @@
-# ComfyUI-SDXL-EmptyLatentImage
+# ComfyUI-SDXL-EmptyLatentImage-Plus
 [Japanese README](README.jp.md)
 
 An extension node for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) that allows you to select a resolution from the pre-defined json files and output a Latent Image.<br>

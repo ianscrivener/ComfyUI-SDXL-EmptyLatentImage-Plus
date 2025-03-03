@@ -70,7 +70,7 @@ class SdxlEmptyLatentImage:
             }
         }
 
-    RETURN_TYPES = ("LATENT",)
+    RETURN_TYPES = ("LATENT", "WIDTH", "HEIGHT")
     FUNCTION = "generate"
 
     CATEGORY = "latent"
@@ -88,9 +88,11 @@ class SdxlEmptyLatentImage:
                 self.resolution_dictionaly[resolution]["width"] // 8,
             ]
         )
-        return ({"samples": latent},)
+        width = self.resolution_dictionaly[resolution]["width"]
+        height = self.resolution_dictionaly[resolution]["height"]
+        return ({"samples": latent, "width": width, "height": height},)
 
 
 NODE_CLASS_MAPPINGS = {
-    "SDXL Empty Latent Image": SdxlEmptyLatentImage,
+    "SDXL Empty Latent Image Plus": SdxlEmptyLatentImage,
 }
